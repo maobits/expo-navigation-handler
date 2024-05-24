@@ -1,6 +1,6 @@
 /**
  * ====================================================
- *  Data sheet: HomeScreen.js
+ *  Data sheet: AddScreen.js
  * ====================================================
  *  Company Name: Maobits LLC.
  *  Department: Mobile Application Development
@@ -18,20 +18,20 @@
  */
 
 /**
- * This code defines the ProfileScreen component, a React component likely used within a React Native application.
- * It displays a basic screen labeled "Home Screen" (mistake in the code) and potentially includes a Menu component.
+ * This code defines the AddScreen component, a React component likely used within a React Native application.
+ * It displays a simple screen with the label "Add Screen." and potentially includes a Menu component.
  
  * Key Components:
  * - View: A basic layout component from React Native, used to structure the screen.
  * - Text: A component to display textual content on the screen.
  * - Menu: An external component likely imported from the components directory.
    - Its functionality is not defined here, but it likely provides some menu UI elements.
-   - The ProfileScreen passes the navigation prop to the Menu component, suggesting potential navigation capabilities.
+   - The AddScreen passes the navigation prop to the Menu component, suggesting potential navigation capabilities.
   
  * Functionality:
- * - The ProfileScreen component renders a main View container that takes up the entire screen (flex: 1).
+ * - The AddScreen component renders a main View container that takes up the entire screen (flex: 1).
  * - It includes a Menu component, potentially used for navigation or other actions.
- * - The screen displays the text "Home Screen" (text likely a mistake based on the file name) in a centered position within another View container.
+ * - The screen displays the text "Add Screen." in a centered position within another View container.
  * - You can add more content to the screen below this text section.
  */
 
@@ -44,18 +44,23 @@ import { View, Text } from 'react-native';
 // Import the Menu component from the components directory
 import Menu from '../components/Menu';
 
-// Define the ProfileScreen component
-const HomeScreen = ({ navigation }) => {
+// Define the AddScreen component
+const AddScreen = ({ navigation }) => {
   return (
-    <View style={{ flex: 1 }}>  
-      <Menu navigation={navigation} /> 
+    // Main container view for the AddScreen component
+    <View style={{ flex: 1 }}>
+      {/* Render the Menu component and pass the navigation prop */}
+      <Menu navigation={navigation} />
       
+      {/* Container for the screen text */}
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text> 
+        {/* Display the text "Add Screen." */}
+        <Text>Add Screen.</Text>
+        {/* You can add more content here if desired */}
       </View>
     </View>
   );
 };
 
-// Export the ProfileScreen component as the default export
-export default HomeScreen;
+// Export the AddScreen component as the default export
+export default AddScreen;
